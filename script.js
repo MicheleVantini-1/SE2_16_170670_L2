@@ -50,6 +50,18 @@ function addProduct(name, quantity)
 
 		var quantityCell = document.getElementById("product_" + name);
 		quantityCell.innerHTML = warehouse[name];
+		
+		// if adding the new items breaks the warehouse limit we 
+		// add the items but we alert the user about that
+		counter += parseInt(quantity);
+		if(counter == limit)
+		{
+			alert("The warehouse is now full");
+		}
+		else if(counter > limit)
+		{
+			alert("The warehouse limit has been exceeded");				
+		}
 
 		// setting the two input html tags values to empty
 		document.getElementById('productName').value = "";
