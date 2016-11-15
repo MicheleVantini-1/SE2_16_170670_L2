@@ -20,23 +20,33 @@ setItemsLimit(defaultLimit);
 */
 function setItemsLimit(l)
 {
-	// setting the new limit
-	limit = parseInt(l);
-	document.getElementById("limitLabel").innerHTML = limit;
-
-	// since the limit has changed, the number of
-	// items in the warehouse can now exceed the limit
-	// If it is the case we alert the user
-	if(counter == limit)
+	// at first check if the limit is a positive integer
+	// (if it is a double it will be casted to int)
+	if((l.length == 0 ||isNaN(parseInt(l)) || parseInt(l) <= 0))
 	{
-		alert("The warehouse is now full");
+		// If the input value is invalid we alert the user
+		alert("The limit must be a POSITIVE integer");
 	}
-	else if(counter > limit)
+	else
 	{
-		alert("The warehouse limit has been exceeded");				
-	}
+		// setting the new limit
+		limit = parseInt(l);
+		document.getElementById("limitLabel").innerHTML = limit;
 
-	// setting the two input html tag value to empty		
-	document.getElementById('productQuantityLimit').value = "";
+		// since the limit has changed, the number of
+		// items in the warehouse can now exceed the limit
+		// If it is the case we alert the user
+		if(counter == limit)
+		{
+			alert("The warehouse is now full");
+		}
+		else if(counter > limit)
+		{
+			alert("The warehouse limit has been exceeded");				
+		}
+
+		// setting the two input html tag value to empty		
+		document.getElementById('productQuantityLimit').value = "";
+	}
 
 }
