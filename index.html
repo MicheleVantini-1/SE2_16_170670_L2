@@ -17,7 +17,9 @@
   	<br/><br/>
   	<input type="text" id="productName" />  	
   	<input type="number" id="productQuantity" />
-  	<button id="addBtn" value="Add product" >Add product</button>
+  	<button id="addBtn" onclick="addProduct(document.getElementById('productName').value, document.getElementById('productQuantity').value);" value="Add product" >Add product</button>
  	  <br/><br/>
+    <script src="model.js"></script>
+    <script src="script.js"></script> 
   </body>
 </html>
