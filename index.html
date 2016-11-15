@@ -19,6 +19,11 @@
   	<input type="number" id="productQuantity" />
   	<button id="addBtn" onclick="addProduct(document.getElementById('productName').value, document.getElementById('productQuantity').value);" value="Add product" >Add product</button>
  	  <br/><br/>
+    Set the maximum number of items that the warehouse can contain (50 by default)
+ 	  <br/>
+  	<input type="number" id="productQuantityLimit" />
+  	<button id="setLimitBtn" onclick="setItemsLimit(document.getElementById('productQuantityLimit').value);" value="Set limit" >Set limit</button>
+   
     <script src="model.js"></script>
     <script src="script.js"></script> 
   </body>
