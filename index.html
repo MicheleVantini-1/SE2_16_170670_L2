@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Warehouse</title>
+  </head>
+
+  <body>
+  	<h3>Warehouse</h3>
+  	<table id="warehouse">
+  		<tr>
+  			<th>Product</th>
+  			<th>Quantity</th>
+  		</tr>
+  	</table>
+  	<br/>
+  	<br/>
+    <button id="showHideAddFormBtn" onclick="showHideAddForm();">Add new product</button>
+    <br/>
+    <div id="addFormDiv" style="display:none">
+      <br/>
+      Name<input type="text" id="productName"/>   
+      Quantity<input type="number" id="productQuantity"/>
+      <button id="addBtn" onclick="addBtnClick();" value="Add product">Add product</button>
+    </div>
+  </body>
+</html>
