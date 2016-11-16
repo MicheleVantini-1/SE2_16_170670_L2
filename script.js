@@ -68,6 +68,8 @@ function addProduct(name, quantity)
 	}	
 }
 
+// The following functions are related to the behavior of the VIEW
+
 /**
 * Function that show/hide the form that allow
 * users to add new products;
