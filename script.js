@@ -75,11 +75,6 @@ function addProduct(name, quantity)
 addInputsVisibility = false;
 function showHideAddForm()
 {
-	// At first we check if the wareouse is already full;
-	// if it is the case the checkLimit() function will 
-	// alert the user about that
-	checkLimit();
-	
 	if(addInputsVisibility)
 	{
 		document.getElementById('addFormDiv').style.display = "none";
@@ -87,6 +82,10 @@ function showHideAddForm()
 	}
 	else
 	{
+		// we check if the wareouse is already full;
+		// if it is the case the checkLimit() function will 
+		// alert the user about that
+		checkLimit();
 		document.getElementById('addFormDiv').style.display = "block";
 		addInputsVisibility = true;
 	}
