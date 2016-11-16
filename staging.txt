@@ -1,0 +1,3 @@
+This file is only for simulate some differences from master to staging branch.
+
+After merging with dev
