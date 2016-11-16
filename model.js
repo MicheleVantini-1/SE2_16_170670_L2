@@ -21,14 +21,24 @@ setItemsLimit(defaultLimit);
 */
 function setItemsLimit(l)
 {
-	// setting the new limit
-	limit = parseInt(l);
-	document.getElementById("limitLabel").innerHTML = limit;
+	// at first check if the limit is a positive integer
+	// (if it is a double it will be casted to int)
+	if((l.length == 0 ||isNaN(parseInt(l)) || parseInt(l) <= 0))
+	{
+		// If the input value is invalid we alert the user
+		alert("The limit must be a POSITIVE integer");
+	}
+	else
+	{
+		// setting the new limit
+		limit = parseInt(l);
+		document.getElementById("limitLabel").innerHTML = limit;
 
-	checkLimit();
+		checkLimit();
 
-	// setting to empty the input field for the limit
-	document.getElementById("productQuantityLimit").value = "";
+		// setting to empty the input field for the limit
+		document.getElementById("productQuantityLimit").value = "";
+	}
 }
 
 /**
